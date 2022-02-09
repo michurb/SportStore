@@ -1,0 +1,37 @@
+﻿@model Order
+
+<h2>Podsumowanie</h2>
+
+<div asp-validation-summary="All" class="text-danger"></div>
+
+<form asp-action="Checkout" method="post">
+    <h3>Dane do przesyłki</h3>
+    <div class="form-group">
+        <label>Imię i nazwisko:</label><input asp-for="Name" class="form-control" />
+    </div>
+    <h3>Adres</h3>
+    <div class="form-group">
+        <label>Adres:</label><input asp-for="Line" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Miasto:</label><input asp-for="City" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Województwo:</label><input asp-for="State" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Kod Pocztowy:</label><input asp-for="Zip" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Kraj:</label><input asp-for="Country" class="form-control" />
+    </div>
+    <h3>Dodatki</h3>
+    <div class="checkbox">
+        <label>
+            <input asp-for="GiftWrap" /> Pakowanie na prezent
+        </label>
+    </div>
+    <div class="text-center">
+        <input class="btn btn-primary" type="submit" value="Zakończ" />
+    </div>
+</form>
